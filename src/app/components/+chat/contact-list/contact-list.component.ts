@@ -10,4 +10,7 @@ import {Component} from '@angular/core';
     templateUrl: './contact-list.component.html',
     styleUrls : ['./contact-list.component.css']
 })
-export class ContactListComponent { }
+export class ContactListComponent {
+
+
+}

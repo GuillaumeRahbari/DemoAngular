@@ -1,13 +1,28 @@
 
+
 <nav class="mainmenu">
     <div class="container">
         <div class="dropdown">
-            <button type="button" class="navbar-toggle" data-toggle="dropdown"><span class="icon-bar"></span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span></button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li><a class="menuItem active" [routerLink]="['Home']">Home</a></li>
-                <li><a class="menuItem" [routerLink]="['About']">About</a></li>
-            </ul>
+
+
+            <div *ngIf="showMenu==false">
+                <button type="button" class="navbar-toggle" (click)="showHideMenu()" data-toggle="dropdown"><span class="icon-bar"></span>
+                <span
+                        class="icon-bar"></span> <span class="icon-bar"></span></button>
+
+            </div>
+            <div *ngIf="showMenu==true">
+                <button type="button" class="navbar-toggle" (click)="showHideMenu()" data-toggle="dropdown"><span class="icon-bar"></span>
+                <span
+                        class="icon-bar"></span> <span class="icon-bar"></span></button>
+            </div>
         </div>
     </div>
 </nav>
+
+<!--
+
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a class="menuItem active" [routerLink]="['Home']">Home</a></li>
+                <li><a class="menuItem" [routerLink]="['About']">About</a></li>
+            </ul>-->

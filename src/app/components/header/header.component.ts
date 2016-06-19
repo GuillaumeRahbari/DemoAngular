@@ -11,4 +11,15 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
     ]
 })
 export class HeaderComponent {
+
+
+    public showMenu: boolean;
+
+    constructor(){
+        this.showMenu=false;
+    }
+
+    showHideMenu(){
+        this.showMenu=!this.showMenu;
+    }
 }
