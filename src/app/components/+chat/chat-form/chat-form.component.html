@@ -1,4 +1,3 @@
-<h1> Hey, I'm ChatFormComponent !</h1>
 
 <div class="container">
     <div class="row">
@@ -8,14 +7,21 @@
                     <span class="glyphicon glyphicon-comment"></span> Chat
                 </div>
                 <div class="panel-body">
-                    <chat-item message="{{messageToSend}}"></chat-item>
+                    <div *ngFor="let currentMessage of messageList">
+
+                        <chat-item message="{{currentMessage}}"
+                                    ></chat-item>
+                    </div>
                 </div>
                 <div class="panel-footer">
                     <div class="input-group">
-                        <input id="btn-input" type="text" class="form-control input-sm"
+                        <input id="btn-input"
+                               [(ngModel)]="messageToSend"
+                               type="text" class="form-control input-sm"
                                placeholder="Type your message here...">
                         <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                            <button class="btn btn-warning btn-sm" id="btn-chat"
+                                    (click)="addComment()">
                                 Send
                             </button>
                         </span>
