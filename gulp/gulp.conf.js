@@ -27,7 +27,8 @@ export const JS_NPM_DEPENDENCIES = [
     {src: 'node_modules/core-js/client/shim.min.js', inject: 'shims'},
     {src: 'node_modules/zone.js/dist/zone.js', inject: 'libs'},
     {src: 'node_modules/reflect-metadata/Reflect.js', inject: 'libs'},
-    {src: 'node_modules/systemjs/dist/system.src.js', inject: 'libs'}
+    {src: 'node_modules/systemjs/dist/system.src.js', inject: 'libs'},
+    {src: 'node_modules/bootstrap/dist/js/bootstrap.js', inject: 'libs'}
 ];
 
 export const CSS_NPM_DEPENDENCIES = [
