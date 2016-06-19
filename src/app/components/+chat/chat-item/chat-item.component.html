@@ -1,1 +1,21 @@
-<h1> Hey, I'm ChatItemComponent !</h1>
+<ul class="chat">
+    <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text={{initials}}" alt="User Avatar"
+                                 class="img-circle">
+                            </span>
+
+        <div class="chat-body clearfix">
+            <div class="header">
+                <strong class="primary-font">{{contact.firstName}} {{contact.lastName}}</strong>
+                <small class="pull-right text-muted">
+                    <span class="glyphicon glyphicon-time"></span>Today
+                </small>
+            </div>
+            <p>
+                {{message}}
+            </p>
+        </div>
+    </li>
+
+</ul>

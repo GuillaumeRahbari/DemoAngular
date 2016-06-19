@@ -13,9 +13,8 @@ import {Component} from '@angular/core';
 export class ContactModelComponent {
 
     constructor(
-        private id: string,
-        private firstName: string,
-        private lastName: string,
-        private image: string
+        public id: string,
+        public firstName: string,
+        public lastName: string
     ){ }
 }
