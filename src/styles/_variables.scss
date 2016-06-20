@@ -1,9 +1,49 @@
-$headerBackground : rgb(0,99,167);
+$headerBackground: rgb(0, 99, 167);
 
-$menuFontColor : white;
+$menuFontColor: white;
 
-$titleColor : rgb(0,99,167);
+$titleColor: rgb(0, 99, 167);
 
-$colorButton: rgb(26,177,136);
+$colorButton: rgb(26, 177, 136);
 
-$other-color : rgba(255,255,255,0.6);
+$other-color: rgba(255, 255, 255, 0.6);
+
+@mixin font-bold {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+@mixin font {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+$white: #fff;
+$black: #000;
+$bg: #f8f8f8;
+$grey: #999;
+$dark: #1a1a1a;
+$light: #e6e6e6;
+$wrapper: 1000px;
+$blue: #00b0ff;
