@@ -26,7 +26,6 @@ export class ChatFormComponent {
     @Input('lastName') lastName:string;
     @Input('conversation') conversation:string;
 
-
     constructor() {
         this.messageToSend = "";
         this.messageList = [new MessageModelComponent("Hey", "server"), new MessageModelComponent("How are you ?", "server")];
