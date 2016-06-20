@@ -4,7 +4,7 @@
 
 import {Component, Input} from '@angular/core';
 import {ContactModelComponent} from '../../models/contact-model/index';
-import {MessageModelComponent} from '../../models/message-model/index';
+import {MessageModelComponent} from "../../models/message-model/message-model.component";
 
 @Component({
     selector: 'chat-item',
@@ -23,8 +23,9 @@ export class ChatItemComponent {
     }
 
     ngOnInit() {
-        console.log("this.message: "+this.message.contact);
-        this.contact=this.message.getContact();
-        this.initials=this.contact.firstName[0] + this.contact.lastName[0];
+        console.log("this.message: "+this.message.message);
+        //console.log("this.message: "+this.message.getContact());
+        //this.contact=this.message.getContact();
+        //this.initials=this.contact.firstName[0] + this.contact.lastName[0];
     }
 }

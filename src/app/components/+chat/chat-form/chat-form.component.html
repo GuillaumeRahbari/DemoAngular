@@ -8,6 +8,7 @@
                 </div>
                 <div class="panel-body">
                     <div *ngFor="let currentMessage of messageList">
+                        le message: {{currentMessage.message}}
 
                         <chat-item message="{{currentMessage}}"
                                     ></chat-item>

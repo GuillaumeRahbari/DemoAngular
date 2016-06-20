@@ -37,7 +37,6 @@ export class ChatFormComponent {
         console.log("message list: id: "+ this.messageList[0].message);
         console.log("contact firstname: "+ this.contact.firstName);
         console.log("message list: firstname: "+ this.messageList[0].getContact().firstName);
-        console.log("message list: first naem with get: "+ this.messageList[0].getContact().firstName);
     }
 
     addComment(){
