@@ -12,10 +12,12 @@ import {Component} from '@angular/core';
 })
 export class ContactModelComponent {
 
+    public id:string;
+    public firstName: string;
+    public lastName: string;
+    public lastMessage: string;
+
     constructor(
-        public id: string,
-        public firstName: string,
-        public lastName: string,
-        public lastMessage: string
+        id:string, firstName:string, lastName:string, lastMessage:string
     ){ }
 }
