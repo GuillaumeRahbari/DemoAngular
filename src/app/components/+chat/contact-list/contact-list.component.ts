@@ -3,7 +3,7 @@
  */
 
 import {Component, Output, EventEmitter} from '@angular/core';
-import {ContactModelComponent} from "../../models/contact-model/contact-model.component";
+import {ContactModel} from '../../models/contact-model/contact.model';
 import {ContactItemComponent} from "../contact-item/contact-item.component";
 import {ManageChatService} from "../../../shared/services/src/manage-chat.service";
 
@@ -17,17 +17,17 @@ import {ManageChatService} from "../../../shared/services/src/manage-chat.servic
 })
 export class ContactListComponent {
 
-    private contactList:ContactModelComponent[];
+    private contactList:ContactModel[];
 
 
-    @Output() sendContact= new EventEmitter<ContactModelComponent>();
+    @Output() sendContact= new EventEmitter<ContactModel>();
 
     constructor(private _manageChatService:ManageChatService){
         this.getContacts();
         //this.contactList=[new ContactModelComponent("-1", "Pierre", "Marcousi", "Je te dirai ça demain")];
     }
 
-    emitContact(contact:ContactModelComponent){
+    emitContact(contact:ContactModel){
         this.sendContact.emit(contact);
     }
 

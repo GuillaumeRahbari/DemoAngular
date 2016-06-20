@@ -1,16 +1,5 @@
-/**
- * Component ModelsMessageModelComponent
- */
+import {ContactModel} from '../contact-model/contact.model';
 
-import {Component} from '@angular/core';
-import {ContactModelComponent} from '../contact-model/index';
-
-@Component({
-    selector: 'message-model',
-    moduleId: module.id,
-    templateUrl: './message-model.component.html',
-    styleUrls: ['./message-model.component.css']
-})
 export class MessageModelComponent {
 
     public message:string;

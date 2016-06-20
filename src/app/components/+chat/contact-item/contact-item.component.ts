@@ -3,7 +3,7 @@
  */
 
 import {Component, Output, Input, EventEmitter} from '@angular/core';
-import {ContactModelComponent} from "../../models/contact-model/contact-model.component";
+import {ContactModel} from "../../models/contact-model/contact.model";
 
 @Component({
     selector: 'contact-item',
@@ -17,13 +17,13 @@ export class ContactItemComponent {
     @Input('lastName') lastName:string;
     @Input('lastMessage') lastMessage:string;
 
-    @Output() sendContact= new EventEmitter<ContactModelComponent>();
+    @Output() sendContact= new EventEmitter<ContactModel>();
 
     constructor(){}
 
 
     emitContact(){
-        this.sendContact.emit(new ContactModelComponent("1", this.firstName, this.lastName, this.lastMessage));
+        this.sendContact.emit(new ContactModel("1", this.firstName, this.lastName, this.lastMessage));
     }
 
 }

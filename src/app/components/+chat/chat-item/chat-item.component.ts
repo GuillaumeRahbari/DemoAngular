@@ -3,7 +3,7 @@
  */
 
 import {Component, Input} from '@angular/core';
-import {ContactModelComponent} from '../../models/contact-model/index';
+import {ContactModel} from '../../models/contact-model/contact.model';
 import {MessageModelComponent} from "../../models/message-model/message-model.component";
 
 @Component({

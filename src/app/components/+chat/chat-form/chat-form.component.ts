@@ -4,7 +4,7 @@
 
 import {Component, Input} from '@angular/core';
 import {ChatItemComponent} from '../chat-item/index';
-import {ContactModelComponent} from '../../models/contact-model/index';
+import {ContactModel} from '../../models/contact-model/contact.model';
 import {MessageModelComponent} from '../../models/message-model/index';
 
 
@@ -18,20 +18,23 @@ import {MessageModelComponent} from '../../models/message-model/index';
 
 export class ChatFormComponent {
 
-    private contact:ContactModelComponent;
+    private contact:ContactModel;
     private messageList:MessageModelComponent[];
     private messageToSend:string;
 
     @Input('firstName') firstName:string;
     @Input('lastName') lastName:string;
     @Input('conversation') conversation:string;
+    @Input('contact') currentContact:ContactModel;
 
     constructor() {
         this.messageToSend = "";
         this.messageList = [new MessageModelComponent("Hey", "server"), new MessageModelComponent("How are you ?", "server")];
     }
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log("current contact: name: "+this.currentContact.firstName)
+    }
 
     addComment() {
         this.messageList.push(new MessageModelComponent(this.messageToSend, "client"));
