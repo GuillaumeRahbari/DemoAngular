@@ -26,12 +26,14 @@ export class ChatFormComponent {
     private messageToSend:string;
 
     @Input("id") id:string;
+    private previousId:string;
 
     constructor(private _manageChatService: ManageChatService) {
         this.messageToSend = "";
     }
 
     ngOnInit() {
+        this.previousId=this.id;
         this.getContactFromID();
     }
 
@@ -39,6 +41,7 @@ export class ChatFormComponent {
         this.messageList.push(new MessageModel(this.messageToSend, "client", "server"));
         this.messageToSend = "";
     }
+
 
     getContactFromID(){
         this._manageChatService.getContact(this.id).then(
@@ -52,5 +55,12 @@ export class ChatFormComponent {
         this._manageChatService.getMessages(this.id).then(
             conversation => this.messageList=conversation
         );
+    }
+
+    ngDoCheck() {
+        if(!(this.id===this.previousId)) {
+            this.previousId = this.id;
+            this.getContactFromID();
+        }
     }
 }
