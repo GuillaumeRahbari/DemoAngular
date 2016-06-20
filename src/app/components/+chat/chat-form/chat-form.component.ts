@@ -25,20 +25,14 @@ export class ChatFormComponent {
     private messageList:MessageModel[];
     private messageToSend:string;
 
-    @Input('firstName') firstName:string;
-    @Input('lastName') lastName:string;
-    @Input('conversation') conversation:string;
-    @Input('contact') currentContact:ContactModel;
+    @Input("id") id:string;
 
     constructor(private _manageChatService: ManageChatService) {
         this.messageToSend = "";
-        this.getConversation();
-        //this.messageList = [new MessageModel("Hey", "server"), new MessageModel("How are you ?", "server")];
     }
 
     ngOnInit() {
-        console.log("current contact: name: "+this.currentContact.firstName);
-        console.log("firstName:" +this.firstName);
+        this.getContactFromID();
     }
 
     addComment() {
@@ -46,8 +40,16 @@ export class ChatFormComponent {
         this.messageToSend = "";
     }
 
-    getConversation(){
-        this._manageChatService.getMessages().then(
+    getContactFromID(){
+        this._manageChatService.getContact(this.id).then(
+                contact =>  this.getConversation(contact)
+        );
+
+    }
+    getConversation(contact: ContactModel){
+        this.contact=contact;
+        console.log("contact: name: "+contact.firstName);
+        this._manageChatService.getMessages(this.id).then(
             conversation => this.messageList=conversation
         );
     }

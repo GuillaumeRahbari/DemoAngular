@@ -1,10 +1,8 @@
 <section class="section" id="home">
     <div class="container">
         <contact-list (sendContact)="displayChat($event)" class="left"></contact-list>
-        <chat-form firstName="Pierre"
-                   lastName="Paul"
-                   conversation="Hey man"
-                   contact="{{currentContact}}"
+        <chat-form
+                   id="{{currentContact.id}}"
                    class="right"></chat-form>
     </div>
 </section>

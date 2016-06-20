@@ -24,10 +24,12 @@ export class ChatComponent {
     //TODO TO REMOVE
 
 
-    constructor(){}
+    constructor(){
+        this.currentContact=new ContactModel("11", "Jean", "Nice", "Hey man");
+    }
 
     displayChat(contact: ContactModel){
-
+        console.log("contact: "+contact.firstName);
         this.currentContact=contact;
     }
 
