@@ -1,6 +1,7 @@
-import { ContactModelComponent } from '../models/contact-model/contact-model.component';
+import { ContactModel } from '../models/contact-model/contact.model';
 
-export var CONTACTS: ContactModelComponent[] = [
+
+export var CONTACTS: ContactModel[] = [
     {id: "11", firstName: 'Jean', lastName: 'Nice', lastMessage:"Hey man"},
     {id: "12", firstName: 'Paul', lastName: 'Nice', lastMessage:"I'm Ready"},
     {id: "13", firstName: 'Harry', lastName: 'Nice', lastMessage:"How are you"},
