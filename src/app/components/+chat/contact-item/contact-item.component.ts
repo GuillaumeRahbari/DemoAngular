@@ -2,7 +2,8 @@
  * Component ChatContactItemComponent
  */
 
-import {Component,Input} from '@angular/core';
+import {Component, Output, Input, EventEmitter} from '@angular/core';
+import {ContactModelComponent} from "../../models/contact-model/contact-model.component";
 
 @Component({
     selector: 'contact-item',
@@ -16,7 +17,13 @@ export class ContactItemComponent {
     @Input('lastName') lastName:string;
     @Input('lastMessage') lastMessage:string;
 
+    @Output() sendContact= new EventEmitter<ContactModelComponent>();
+
     constructor(){}
 
+
+    emitContact(){
+        this.sendContact.emit(new ContactModelComponent("1", this.firstName, this.lastName, this.lastMessage));
+    }
 
 }

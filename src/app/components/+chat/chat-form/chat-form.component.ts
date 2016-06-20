@@ -23,6 +23,7 @@ export class ChatFormComponent {
     private messageToSend:string;
 
     @Input('contactName') contactName;
+    @Input()
 
     constructor() {
         this.messageToSend = "";
