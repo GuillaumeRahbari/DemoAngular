@@ -28,6 +28,8 @@ export const JS_NPM_DEPENDENCIES = [
     {src: 'node_modules/zone.js/dist/zone.js', inject: 'libs'},
     {src: 'node_modules/reflect-metadata/Reflect.js', inject: 'libs'},
     {src: 'node_modules/systemjs/dist/system.src.js', inject: 'libs'},
+    {src: 'node_modules/tether-1.3.1/dist/js/tether.js', inject: 'libs'},
+    {src: 'node_modules/jquery/dist/jquery.js', inject: 'libs'},
     {src: 'node_modules/bootstrap/dist/js/bootstrap.js', inject: 'libs'}
 ];
 
