@@ -15,6 +15,7 @@ export class ContactModelComponent {
     constructor(
         public id: string,
         public firstName: string,
-        public lastName: string
+        public lastName: string,
+        public lastMessage: string
     ){ }
 }

@@ -1,1 +1,9 @@
 <h1>ContactList component</h1>
+
+<div *ngFor="let contact of contactList">
+    <contact-item
+            firstName="{{contact.firstName}}"
+            lastName="{{contact.lastName}}"
+            lastMessage="{{contact.lastMessage}}"
+    ></contact-item>
+</div>

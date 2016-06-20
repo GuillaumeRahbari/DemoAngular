@@ -2,7 +2,7 @@
  * Component ChatContactItemComponent
  */
 
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
 
 @Component({
     selector: 'contact-item',
@@ -10,4 +10,13 @@ import {Component} from '@angular/core';
     templateUrl: './contact-item.component.html',
     styleUrls : ['./contact-item.component.css']
 })
-export class ContactItemComponent { }
+export class ContactItemComponent {
+
+    @Input('firstName') firstName:string;
+    @Input('lastName') lastName:string;
+    @Input('lastMessage') lastMessage:string;
+
+    constructor(){}
+
+
+}
