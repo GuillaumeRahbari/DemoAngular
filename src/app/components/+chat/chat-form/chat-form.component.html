@@ -10,7 +10,8 @@
                     <div *ngFor="let currentMessage of messageList">
                         le message: {{currentMessage.message}}
 
-                        <chat-item message="{{currentMessage}}"
+                        <chat-item message="currentMessage.message"
+                                   from="currentMessage"
                                     ></chat-item>
                     </div>
                 </div>

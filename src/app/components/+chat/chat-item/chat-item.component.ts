@@ -15,15 +15,20 @@ import {MessageModelComponent} from "../../models/message-model/message-model.co
 export class ChatItemComponent {
 
     private initials:string;
+    private from:string;
 
-    @Input('message') message:MessageModelComponent;
+    @Input('message') message:string;
+    @Input('from') from:string;
+    @Input('contact') sender:string;
     private contact:ContactModelComponent;
 
     constructor() {
+        this.from="server";
     }
 
     ngOnInit() {
-        console.log("this.message: "+this.message.message);
+        //console.log("this.message: "+this.message);
+        //console.log("this.message: "+this.message.getMessage());
         //console.log("this.message: "+this.message.getContact());
         //this.contact=this.message.getContact();
         //this.initials=this.contact.firstName[0] + this.contact.lastName[0];

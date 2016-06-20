@@ -24,10 +24,7 @@ export class ChatFormComponent {
 
     constructor(){
         this.messageToSend="";
-        this.contact=new ContactModelComponent("-1", "Mark", "Zuckerberg");
-        this.messageList=[new MessageModelComponent("1",this.contact,"coucou","19/06")];
-        this.from=["server"];
-
+        this.messageList=[new MessageModelComponent("1","Mark"," Zuckerberg","coucou","19/06", "client")];
     }
 
     ngOnInit(){
@@ -36,11 +33,10 @@ export class ChatFormComponent {
         console.log("message list: id: "+ this.messageList[0].id);
         console.log("message list: id: "+ this.messageList[0].message);
         console.log("contact firstname: "+ this.contact.firstName);
-        console.log("message list: firstname: "+ this.messageList[0].getContact().firstName);
     }
 
     addComment(){
-        this.messageList.push(new MessageModelComponent("0",new ContactModelComponent("-1", "Me", ""),this.messageToSend,"19/06"));
+        this.messageList;
         this.messageToSend="";
     }
 }
