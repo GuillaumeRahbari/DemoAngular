@@ -3,6 +3,7 @@
  */
 import {Injectable} from '@angular/core';
 import {CONTACTS} from "../../../components/mocks/mock-contact";
+import {MESSAGES} from "../../../components/mocks/mock-conversation";
 
 @Injectable()
 export class ManageChatService {
@@ -13,5 +14,9 @@ export class ManageChatService {
      */
     getContacts(){
         return Promise.resolve(CONTACTS);
+    }
+
+    getMessages(){
+        return Promise.resolve(MESSAGES);
     }
 }

@@ -21,9 +21,13 @@ export class ChatComponent {
     private contactList;
     private currentContact:ContactModel;
 
+    //TODO TO REMOVE
+
+
     constructor(){}
 
     displayChat(contact: ContactModel){
+
         this.currentContact=contact;
     }
 
