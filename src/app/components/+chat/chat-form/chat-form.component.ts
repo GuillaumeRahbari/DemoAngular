@@ -19,24 +19,19 @@ export class ChatFormComponent {
 
     private contact:ContactModelComponent;
     private messageList:MessageModelComponent[];
-    private from:string[];
     private messageToSend:string;
 
     constructor(){
         this.messageToSend="";
-        this.messageList=[new MessageModelComponent("1","Mark"," Zuckerberg","coucou","19/06", "client")];
+        this.messageList=[new MessageModelComponent("Hey", "server")];
     }
 
     ngOnInit(){
         console.log("message list: length: "+ this.messageList.length);
-
-        console.log("message list: id: "+ this.messageList[0].id);
-        console.log("message list: id: "+ this.messageList[0].message);
-        console.log("contact firstname: "+ this.contact.firstName);
     }
 
     addComment(){
-        this.messageList;
+        this.messageList.push(new MessageModelComponent(this.messageToSend,"client"));
         this.messageToSend="";
     }
 }

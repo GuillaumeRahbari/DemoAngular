@@ -13,21 +13,12 @@ import {ContactModelComponent} from '../contact-model/index';
 })
 export class MessageModelComponent {
 
-    public id:string;
-    public firstName:string;
-    public lastName:string;
     public message:string;
-    public date:string;
     public from:string;
 
-    constructor(id:string, firstName:string, lastName:string,
-                message:string, date:string, from:string) {
-        this.id=id;
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.message=message;
-        this.date=date;
-        this.from=from;
+    constructor(message:string, from:string) {
+        this.message = message;
+        this.from = from;
     }
 
     public getMessage() {

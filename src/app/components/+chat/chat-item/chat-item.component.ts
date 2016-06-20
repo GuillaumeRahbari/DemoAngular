@@ -19,14 +19,14 @@ export class ChatItemComponent {
 
     @Input('message') message:string;
     @Input('from') from:string;
-    @Input('contact') sender:string;
-    private contact:ContactModelComponent;
 
     constructor() {
-        this.from="server";
+
     }
 
     ngOnInit() {
+        console.log("from: "+this.from);
+        console.log("message: "+this.message);
         //console.log("this.message: "+this.message);
         //console.log("this.message: "+this.message.getMessage());
         //console.log("this.message: "+this.message.getContact());
