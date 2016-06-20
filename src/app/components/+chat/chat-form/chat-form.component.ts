@@ -22,7 +22,10 @@ export class ChatFormComponent {
     private messageList:MessageModelComponent[];
     private messageToSend:string;
 
-    @Input('contactName') contactName;
+    @Input('firstName') firstName:string;
+    @Input('lastName') lastName:string;
+    @Input('conversation') conversation:string;
+
 
     constructor() {
         this.messageToSend = "";

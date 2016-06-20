@@ -14,8 +14,6 @@ import {MessageModelComponent} from "../../models/message-model/message-model.co
 })
 export class ChatItemComponent {
 
-
-
     @Input('message') message:string;
     @Input('from') from:string;
 

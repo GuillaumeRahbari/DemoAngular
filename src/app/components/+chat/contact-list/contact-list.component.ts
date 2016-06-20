@@ -28,7 +28,6 @@ export class ContactListComponent {
     }
 
     emitContact(contact:ContactModelComponent){
-        console.log("contact: "+contact.firstName);
         this.sendContact.emit(contact);
     }
 
