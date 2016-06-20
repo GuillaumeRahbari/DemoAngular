@@ -1,1 +1,13 @@
-<h1>ContactList component</h1>
+<ul class="contacts">
+    <li *ngFor="let contact of contactList" class="contact">
+        <contact-item
+                firstName="{{contact.firstName}}"
+                lastName="{{contact.lastName}}"
+                lastMessage="{{contact.lastMessage}}"
+
+                (sendContact)="emitContact($event)"
+                (click)="emitContact(contact)"
+        >
+        </contact-item>
+    </li>
+</ul>

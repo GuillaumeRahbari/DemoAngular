@@ -2,13 +2,13 @@
     <div *ngIf="from==='server'">
         <li class="left clearfix">
                             <span class="chat-img pull-left">
-                            <img src="http://placehold.it/50/55C1E7/fff&amp;text={{initials}}" alt="User Avatar"
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=TE" alt="User Avatar"
                                  class="img-circle">
                             </span>
 
             <div class="chat-body clearfix">
                 <div class="header">
-                    <strong class="primary-font">{{contact.firstName}} {{contact.lastName}}</strong>
+                    <strong class="primary-font"></strong>
                     <small class="pull-right text-muted">
                         <span class="glyphicon glyphicon-time"></span>Today
                     </small>
@@ -32,8 +32,7 @@
                     <strong class="pull-right primary-font">Bhaumik Patel</strong>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                    dolor, quis ullamcorper ligula sodales.
+                    {{message}}
                 </p>
             </div>
         </li>

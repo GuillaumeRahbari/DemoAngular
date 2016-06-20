@@ -5,6 +5,7 @@
 import {Component} from '@angular/core';
 import {ChatFormComponent} from './chat-form/index';
 import {ContactListComponent} from './contact-list/index';
+import {ContactModel} from '../models/contact-model/contact.model';
 
 @Component({
     selector: 'chat',
@@ -17,5 +18,13 @@ import {ContactListComponent} from './contact-list/index';
 })
 export class ChatComponent {
 
+    private contactList;
+    private currentContact:ContactModel;
+
+    constructor(){}
+
+    displayChat(contact: ContactModel){
+        this.currentContact=contact;
+    }
 
 }

@@ -1,17 +1,6 @@
 <section class="section" id="home">
     <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-6 col-lg-6 text-center">
-
-                <contact-list></contact-list>
-            </div> <!-- /col -->
-            <div class="col-lg-6 col-md-6 text-center">
-
-                <chat-form></chat-form>
-            </div>
-        </div> <!-- /row -->
-
+        <contact-list (sendContact)="displayChat($event)" class="left"></contact-list>
+        <chat-form contactName="Pierre Gregoire" class="right"></chat-form>
     </div>
 </section>

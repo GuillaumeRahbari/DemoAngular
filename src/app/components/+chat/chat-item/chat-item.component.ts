@@ -3,8 +3,8 @@
  */
 
 import {Component, Input} from '@angular/core';
-import {ContactModelComponent} from '../../models/contact-model/index';
-import {MessageModelComponent} from '../../models/message-model/index';
+import {ContactModel} from '../../models/contact-model/contact.model';
+import {MessageModelComponent} from "../../models/message-model/message-model.component";
 
 @Component({
     selector: 'chat-item',
@@ -14,17 +14,12 @@ import {MessageModelComponent} from '../../models/message-model/index';
 })
 export class ChatItemComponent {
 
-    private initials:string;
-
-    @Input('message') message:MessageModelComponent;
-    private contact:ContactModelComponent;
+    @Input('message') message:string;
+    @Input('from') from:string;
 
     constructor() {
     }
 
     ngOnInit() {
-        console.log("this.message: "+this.message.contact);
-        this.contact=this.message.getContact();
-        this.initials=this.contact.firstName[0] + this.contact.lastName[0];
     }
 }
