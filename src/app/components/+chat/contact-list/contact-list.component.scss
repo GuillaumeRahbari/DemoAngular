@@ -2,8 +2,10 @@
 
 .contacts {
   margin-left: -1px;
+  padding-left:0px;
   border-right: 1px solid $light;
   border-left: 1px solid $light;
+  list-style-type: none;
   @include calc(width, '100% + 2px');
   .contact {
     position: relative;
