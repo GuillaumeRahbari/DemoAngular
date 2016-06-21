@@ -4,19 +4,9 @@
     <div class="conversation-start">
         <span>Today, 5:38 PM</span>
     </div>
-    <div *ngFor="let currentMessage of messageList">
-        <div *ngIf="currentMessage.from==='server'">
-
-            <div class="bubble you">
-                {{currentMessage.message}}
-            </div>
-        </div>
-        <div *ngIf="currentMessage.from==='client'">
-
-            <div class="bubble me">
-                {{currentMessage.message}}
-            </div>
-        </div>
+    <div *ngFor="let currentMessage of messageList" class="bubble"
+         [ngClass]="{'you': currentMessage.from==='server', 'me' : currentMessage.from==='client'}">
+        {{currentMessage.message}}
     </div>
 
 </div>
