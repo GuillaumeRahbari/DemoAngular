@@ -19,10 +19,20 @@
   position: relative;
   overflow: hidden;
   padding: 0 35px 92px;
-  border-width: 1px 1px 1px 0;
-  border-style: solid;
-  border-color: $light;
-
+  border: 1px solid $light;
+  border-left-width: 0;
+  @include calc(height, '100% - 48px');
+  justify-content: flex-end;
+  flex-direction: column;
+  display: flex;
+  .bubble {
+    transition-timing-function: cubic-bezier(.4, -.04, 1, 1);
+    @for $i from 1 through 10 {
+      &:nth-of-type(#{$i}) {
+        animation-duration: .15s *$i;
+      }
+    }
+  }
 
   .bubble {
     font-size: 16px;
@@ -32,6 +42,7 @@
     margin-bottom: 8px;
     padding: 13px 14px;
     vertical-align: top;
+    border-radius: 5px;
     &:before {
       position: absolute;
       top: 19px;
@@ -39,11 +50,14 @@
       width: 8px;
       height: 6px;
       content: '\00a0';
+      transform: rotate(29deg) skew(-35deg);
     }
     &.you {
       float: left;
       color: $white;
       background-color: $blue;
+      align-self: flex-start;
+      animation-name: slideFromLeft;
       &:before {
         left: -3px;
         background-color: $blue;
@@ -53,9 +67,37 @@
       float: right;
       color: $dark;
       background-color: #eceff1;
+      align-self: flex-end;
+      animation-name: slideFromRight;
       &:before {
         right: -3px;
         background-color: #eceff1;
+      }
+    }
+  }
+  .conversation-start {
+    position: relative;
+    width: 100%;
+    margin-bottom: 27px;
+    text-align: center;
+    span {
+      font-size: 14px;
+      display: inline-block;
+      color: $grey;
+      &:before, &:after {
+        position: absolute;
+        top: 10px;
+        display: inline-block;
+        width: 30%;
+        height: 1px;
+        content: '';
+        background-color: $light;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
       }
     }
   }
@@ -82,62 +124,3 @@
   }
 
 }
-/**.chat
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.chat li
-{
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted #B3A9A9;
-}
-
-.chat li.left .chat-body
-{
-  margin-left: 60px;
-}
-
-.chat li.right .chat-body
-{
-  margin-right: 60px;
-}
-
-
-.chat li .chat-body p
-{
-  margin: 0;
-  color: #777777;
-}
-
-.panel .slidedown .glyphicon, .chat .glyphicon
-{
-  margin-right: 5px;
-}
-
-.panel-body
-{
-  overflow-y: scroll;
-  height: 400px;
-}
-
-::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar
-{
-  width: 12px;
-  background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #555;
-}**/
