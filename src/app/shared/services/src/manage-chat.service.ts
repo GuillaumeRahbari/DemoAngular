@@ -37,4 +37,15 @@ export class ManageChatService {
         }
         return Promise.resolve(this.messageList);
     }
+
+    getLastMessage(id:string){
+        let index=[];
+        for(let i=0;i<MESSAGES.length;i++){
+            if(MESSAGES[i].contactID===id) {
+               index.push(i);
+            }
+        }
+
+        return Promise.resolve(MESSAGES[index[index.length-1]]);
+    }
 }

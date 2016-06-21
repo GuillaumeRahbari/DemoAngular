@@ -2,9 +2,7 @@
     <li *ngFor="let contact of contactList" class="contact"
         (click)="emitContact(contact)">
         <contact-item
-                firstName="{{contact.firstName}}"
-                lastName="{{contact.lastName}}"
-                lastMessage="{{contact.lastMessage}}"
+                id="{{contact.id}}"
 
         >
         </contact-item>
