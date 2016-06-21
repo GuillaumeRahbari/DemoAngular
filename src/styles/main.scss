@@ -32,25 +32,5 @@ body {
   font-weight: normal;
 }
 
-/********************************************************/
-/*             Sections - universal classes             */
-/********************************************************/
-.section {
-  z-index: 1;
-  min-height: 420px;
-  width: 100%;
-  overflow: auto;
-  height: 100%;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  top: 0;
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding-top: 160px;
-  }
-}
-
 
 
