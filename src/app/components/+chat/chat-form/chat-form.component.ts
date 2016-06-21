@@ -30,6 +30,7 @@ export class ChatFormComponent {
 
     constructor(private _manageChatService: ManageChatService) {
         this.messageToSend = "";
+        this.contact=new ContactModel("","","","","");
     }
 
     ngOnInit() {
