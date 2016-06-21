@@ -16,6 +16,7 @@ import {ContactModel} from '../models/contact-model/contact.model';
         ContactListComponent
     ]
 })
+
 export class ChatComponent {
 
     private contactList;
@@ -25,7 +26,7 @@ export class ChatComponent {
 
 
     constructor(){
-        this.currentContact=new ContactModel("11", "Jean", "Nice", "Hey man");
+        this.currentContact=new ContactModel("11", "Jean", "Nice", "Hey man","");
     }
 
     displayChat(contact: ContactModel){

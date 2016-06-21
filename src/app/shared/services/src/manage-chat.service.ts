@@ -20,12 +20,17 @@ export class ManageChatService {
         return Promise.resolve(CONTACTS);
     }
 
+    /**
+     *
+     * @param id
+     * @returns {Promise<ContactModel>}
+     */
     getContact(id:string){
         console.log("yes je rentre, id:");
         for(let i=0;i<CONTACTS.length;i++){
             if(CONTACTS[i].id===id) return Promise.resolve(CONTACTS[i])
         }
-        return Promise.resolve(new ContactModel("","","",""));
+        return Promise.resolve(new ContactModel("","","","",""));
     }
 
     getMessages(id:string){

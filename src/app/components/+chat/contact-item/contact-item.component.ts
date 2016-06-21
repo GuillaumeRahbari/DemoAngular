@@ -22,7 +22,7 @@ export class ContactItemComponent {
     @Output() sendContact= new EventEmitter<ContactModel>();
 
     constructor(private _manageChatService: ManageChatService){
-        this.contact=new ContactModel("","","","");
+        this.contact=new ContactModel("","","","","");
         this.lastMessage= new MessageModel("","","","");
     }
 
@@ -44,7 +44,7 @@ export class ContactItemComponent {
 
     emitContact(){
         this.sendContact.emit(new ContactModel("1", this.contact.firstName,
-            this.contact.lastName, this.contact.lastMessage));
+            this.contact.lastName, this.contact.lastMessage,""));
     }
 
 }
