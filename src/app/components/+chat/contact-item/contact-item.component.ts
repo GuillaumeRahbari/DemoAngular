@@ -4,8 +4,6 @@
 
 import {Component, Output, Input, EventEmitter} from '@angular/core';
 import {ContactModel} from "../../models/contact-model/contact.model";
-import {ManageChatService} from "../../../shared/services/src/manage-chat.service";
-import {MessageModel} from "../../models/message-model/message.model";
 
 @Component({
     selector: 'contact-item',

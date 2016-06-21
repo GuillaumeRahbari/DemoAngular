@@ -7,6 +7,13 @@
   @include font-bold;
 }
 
+img {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
 .preview {
   font-size: 14px;
   display: inline-block;
