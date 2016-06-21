@@ -9,22 +9,34 @@ body {
   background-size: cover;
 }
 
-.container {
-  width: 80%;
-  height: 75%;
-  background-color: $white;
-  padding-left:0px;
-  .left {
-    float: left;
-    width: 37.6%;
-    height: 100%;
-    border: 1px solid $light;
-    background-color: $white;
-  }
-  .right {
+.wrapper {
+  position: relative;
+  left: 50%;
+  width: $wrapper;
+  height: 800px;
+  transform: translate(-50%, 0);
+
+  .container {
     position: relative;
-    float: left;
-    width: 62.4%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 75%;
+    background-color: $white;
+    padding-left: 0;
+    transform: translate(-50%, -50%);
+    .left {
+      float: left;
+      width: 37.6%;
+      height: 100%;
+      border: 1px solid $light;
+      background-color: $white;
+    }
+    .right {
+      position: relative;
+      float: left;
+      width: 62.4%;
+      height: 100%;
+    }
   }
 }
