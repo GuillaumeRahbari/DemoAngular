@@ -7,10 +7,11 @@ export class MessageModel {
     public to:string;
     public contactID:string;
 
-    constructor(message:string, from:string, to:string) {
+    constructor(message:string, from:string, to:string, contactID:string) {
         this.message = message;
         this.from = from;
         this.to=to;
+        this.contactID=contactID
     }
 
     public getMessage() {

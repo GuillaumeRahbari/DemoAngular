@@ -38,7 +38,7 @@ export class ChatFormComponent {
     }
 
     addComment() {
-        this.messageList.push(new MessageModel(this.messageToSend, "client", "server"));
+        this.messageList.push(new MessageModel(this.messageToSend, "client", "server","1"));
         this.messageToSend = "";
     }
 

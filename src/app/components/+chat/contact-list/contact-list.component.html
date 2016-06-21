@@ -1,12 +1,12 @@
 <ul class="contacts">
-    <li *ngFor="let contact of contactList" class="contact">
+    <li *ngFor="let contact of contactList" class="contact"
+        (click)="emitContact(contact)">
         <contact-item
                 firstName="{{contact.firstName}}"
                 lastName="{{contact.lastName}}"
                 lastMessage="{{contact.lastMessage}}"
 
                 (sendContact)="emitContact($event)"
-                (click)="emitContact(contact)"
         >
         </contact-item>
     </li>
