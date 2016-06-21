@@ -10,8 +10,8 @@ $enable-flex : true;
 
 $fa-font-path : '../../node_modules/font-awesome/fonts';
 
-html {
-    background:#505D6E url(../assets/images/body.jpg) no-repeat center center fixed;
+html {//#505D6E
+    background:#505D6E url(../assets/images/body4.jpg) no-repeat center center fixed;
     min-height:100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
