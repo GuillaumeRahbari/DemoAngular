@@ -22,15 +22,11 @@ export class ChatComponent {
     private contactList;
     private currentContact:ContactModel;
 
-    //TODO TO REMOVE
-
-
     constructor(){
         this.currentContact=new ContactModel("11", "Jean", "Nice", "Hey man", 'http://s13.postimg.org/ih41k9tqr/img1.jpg');
     }
 
     displayChat(contact: ContactModel){
-        console.log("contact: "+contact.firstName);
         this.currentContact=contact;
     }
 

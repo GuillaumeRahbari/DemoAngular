@@ -38,11 +38,6 @@ export class ChatFormComponent {
         this.getContactFromID();
     }
 
-    addComment() {
-        this.messageList.push(new MessageModel(this.messageToSend, "client", "server","1"));
-        this.messageToSend = "";
-    }
-
 
     getContactFromID(){
         this._manageChatService.getContact(this.id).then(
@@ -63,5 +58,11 @@ export class ChatFormComponent {
             this.previousId = this.id;
             this.getContactFromID();
         }
+    }
+
+
+    onSubmit() {
+        this.messageList.push(new MessageModel(this.messageToSend, "client", "server","1"));
+        this.messageToSend = "";
     }
 }
