@@ -111,6 +111,8 @@
   padding-left: 8px;
   border: 1px solid $light;
   background-color: #eceff1;
+  @include calc(width, '100% - 58px');
+  border-radius: 5px;
   input {
     font-size: 16px;
     float: left;
@@ -121,6 +123,18 @@
     border: 0;
     outline: none;
     background-color: #eceff1;
+    @include font;
   }
-
+  .write-link {
+    &.send {
+      cursor: pointer;
+      &:before {
+        float: right;
+        width: 20px;
+        height: 42px;
+        content: '';
+        background: url('http://s30.postimg.org/nz9dho0pp/send.png') no-repeat center;
+      }
+    }
+  }
 }
