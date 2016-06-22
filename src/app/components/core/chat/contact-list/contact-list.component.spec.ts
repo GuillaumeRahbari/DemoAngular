@@ -1,7 +1,7 @@
 /**
  * Test Component ChatContactList
  */
-import {ContactListComponent} from "./contact-list.component";
+import {ContactListComponent} from "./contact-list.component.ts";
 import {Component} from "@angular/core";
 @Component({
     selector: 'test-contact-list',

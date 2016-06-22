@@ -6,15 +6,15 @@ import {
     Component,
     Input
 } from "@angular/core";
-import {ContactModel} from "../../models/contact-model/contact.model";
-import {MessageModel} from "../../models/message-model/message.model";
-import {ManageChatService} from "../../../shared/services/src/manage-chat.service";
+import {ContactModel} from "../../../models/contact-model/contact.model";
+import {MessageModel} from "../../../models/message-model/message.model";
+import {ManageChatService} from "../../../../shared/services/src/manage-chat.service";
 
 
 @Component({
     selector: 'chat-form',
     moduleId: module.id,
-    templateUrl: './chat-form.component.html',
+    templateUrl: 'chat-form.component.html',
     styleUrls: ['./chat-form.component.css'],
     providers: [ManageChatService]
 })

@@ -1,7 +1,7 @@
 /**
  * Test Component ChatChatForm
  */
-import {ChatFormComponent} from "./chat-form.component";
+import {ChatFormComponent} from "./chat-form.component.ts";
 import {Component} from "@angular/core";
 @Component({
     selector: 'test-chat-form',

@@ -3,14 +3,14 @@
  */
 
 import {Component, Output, EventEmitter} from '@angular/core';
-import {ContactModel} from '../../models/contact-model/contact.model';
+import {ContactModel} from '../../../models/contact-model/contact.model';
 import {ContactItemComponent} from "../contact-item/contact-item.component";
-import {ManageChatService} from "../../../shared/services/src/manage-chat.service";
+import {ManageChatService} from "../../../../shared/services/src/manage-chat.service";
 
 @Component({
     selector: 'contact-list',
     moduleId: module.id,
-    templateUrl: './contact-list.component.html',
+    templateUrl: 'contact-list.component.html',
     styleUrls : ['./contact-list.component.css'],
     directives: [ContactItemComponent],
     providers: [ManageChatService]
