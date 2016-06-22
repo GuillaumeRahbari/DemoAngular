@@ -24,7 +24,7 @@
       background-color: $light;
       transform: translate(-50%, 0);
     }
-    &.active, &:hover {
+    &:hover {
       margin-top: -1px;
       margin-left: -1px;
       padding-top: 13px;
@@ -32,7 +32,7 @@
       background-color: $blue;
       @include calc(width, '100% + 2px');
       @include calc(padding-left, '10% + 1px');
-      span {
+      /deep/ span {
         color: $white;
         background: transparent;
       }

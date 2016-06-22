@@ -13,41 +13,6 @@
 <form (ngSubmit)="onSubmit()">
     <div class="write ">
         <input [(ngModel)]="messageToSend" type="text"/>
+        <span class="write-link send"></span>
     </div>
 </form>
-
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <span class="glyphicon glyphicon-comment"></span> Chat with <!--{{contact.firstName}}
-                     {{contact.lastName}}
-                </div>
-                <div class="panel-body">
-                    <div *ngFor="let currentMessage of messageList">
-
-                        <chat-item message="{{currentMessage.message}}"
-                                   from="{{currentMessage.from}}"
-                                    ></chat-item>
-                    </div>
-                </div>
-                <div class="panel-footer">
-                    <div class="input-group">
-                        <input id="btn-input"
-                               [(ngModel)]="messageToSend"
-                               type="text" class="form-control input-sm"
-                               placeholder="Type your message here...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat"
-                                    (click)="addComment()">
-                                Send
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
