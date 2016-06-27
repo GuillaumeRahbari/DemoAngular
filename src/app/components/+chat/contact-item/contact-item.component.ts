@@ -32,6 +32,6 @@ export class ContactItemComponent {
     }
 
     getContact(){
-        this.sendContact.emit(new COntact());
+        //this.sendContact.emit(new ContactModel());
     }
 }
