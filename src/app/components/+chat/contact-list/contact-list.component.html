@@ -1,0 +1,11 @@
+<div *ngFor="let contact of contactList">
+
+    <contact-item
+            prenom="{{contact.firstName}}"
+            nom="{{contact.lastName}}"
+            contactID="{{contact.id}}"
+
+            sendContact="openConversation()"
+    ></contact-item>
+
+</div>
