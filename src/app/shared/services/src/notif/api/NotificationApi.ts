@@ -35,7 +35,9 @@ import 'rxjs/Rx';
 @Injectable()
 export class NotificationApi {
     protected basePath = 'http://gardencaring-services.eu-gb.mybluemix.net/rest';
-    public defaultHeaders : Headers = new Headers({'Content-Type': 'text/plain; application/x-www-form-urlencoded; multipart/form-data'});
+    //public defaultHeaders : Headers = new Headers({'Content-Type': 'text/plain; application/x-www-form-urlencoded; multipart/form-data'});
+    public defaultHeaders : Headers = new Headers({
+        'Access-Control-Allow-Origin': "http://localhost:3000"});
 
     constructor(protected http: Http, @Optional() basePath: string) {
         if (basePath) {
