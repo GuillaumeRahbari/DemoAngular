@@ -1,6 +1,7 @@
 <section class="section">
     <div class="container">
 
+
         <div class="row">
             <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
 
@@ -19,3 +20,17 @@
 
     </div>
 </section>
+
+<div class="container">
+    <div class="row">
+        <base-chart class="chart"
+                    [datasets]="barChartData"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></base-chart>
+
+    </div>
+</div>

@@ -7,7 +7,8 @@
     var map            = {
         'app'     : 'app', // 'dist',
         '@angular': 'node_modules/@angular',
-        'rxjs'    : 'node_modules/rxjs'
+        'rxjs'    : 'node_modules/rxjs',
+        'ng2-charts': 'node_modules/ng2-charts'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages       = {
