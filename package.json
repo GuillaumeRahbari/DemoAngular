@@ -16,6 +16,7 @@
     "@angular/router": "3.0.0-alpha.7",
     "@angular/router-deprecated": "2.0.0-rc.2",
     "bootstrap": "^4.0.0-alpha.2",
+    "chart.js": "^2.1.6",
     "core-js": "2.4.0",
     "font-awesome": "^4.6.3",
     "jquery": "2.2.4",
